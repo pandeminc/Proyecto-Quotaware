@@ -1,7 +1,7 @@
 <?php 
 	
 	//define("BASE_URL", "http://localhost/tienda_virtual/");
-	const BASE_URL = "http://localhost/sistema2";
+	const BASE_URL = "http://localhost/quotaware";
 
 	//Zona horaria
 	date_default_timezone_set('America/Santiago');
