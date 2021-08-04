@@ -73,7 +73,7 @@
             return $request;        
 
         }
-
+        // actualizar el atributo de estadoid
         public function updateCotizacion(int $idpedido, string $estado){
             $query_insert = "UPDATE pedido SET estadoid = ? WHERE idpedido = $idpedido";
             $arrData = array($estado);
