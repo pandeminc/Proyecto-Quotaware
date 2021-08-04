@@ -111,5 +111,25 @@ class Cotizaciones extends Controllers{
             die();
         }
         }
+
+        		public function delCotizacion()
+		{
+			if($_POST){
+				if($_SESSION['permisosMod']['d']){
+					$intIdrol = intval($_POST['idrol']);
+					$requestDelete = $this->model->deleteCotizacion($intIdpedido);
+					if($requestDelete == 'ok')
+					{
+						$arrResponse = array('status' => true, 'msg' => 'Se ha eliminado la Cotización');
+					}else if($requestDelete == 'exist'){
+						$arrResponse = array('status' => false, 'msg' => 'No es posible eliminar la Cotización.');
+					}else{
+						$arrResponse = array('status' => false, 'msg' => 'Error al eliminar la Cotización.');
+					}
+					echo json_encode($arrResponse,JSON_UNESCAPED_UNICODE);
+				}
+			}
+			die();
+		}
     }
 ?>        
