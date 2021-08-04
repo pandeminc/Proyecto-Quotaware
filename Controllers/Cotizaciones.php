@@ -89,7 +89,7 @@ class Cotizaciones extends Controllers{
             die();
         }
         //   funcion para editar y actualizar el estado cotización 
-        // el gran problema
+        // funcion para editar datos de la cotizacion y ademas remplazarlos
         public function setCotizacion(){
             if($_POST){
                 if($_SESSION['permisosMod']['u'] and $_SESSION['userData']['idrol']  != RCLIENTES ){
