@@ -83,6 +83,28 @@
         return $request_insert;
         }
 
+                public function deleteCotizacion(int $idpedido)
+        {
+            $this->intIdpedido = $idpedido;
+            $sql = "SELECT * FROM pedido WHERE idpedido = $this->intIdrol";
+            $request = $this->select_all($sql);
+            if(empty($request))
+            {
+                $sql = "UPDATE pedido SET status = ? WHERE idpedido = $this->intIdpedido ";
+                $arrData = array(0);
+                $request = $this->update($sql,$arrData);
+                if($request)
+                {
+                    $request = 'ok';    
+                }else{
+                    $request = 'error';
+                }
+            }else{
+                $request = 'exist';
+            }
+            return $request;
+        }
+
 
 
         
