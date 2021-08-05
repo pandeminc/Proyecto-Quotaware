@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-08-2021 a las 12:21:23
+-- Tiempo de generación: 04-08-2021 a las 20:23:46
 -- Versión del servidor: 10.4.18-MariaDB
 -- Versión de PHP: 8.0.3
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `db_sistema2`
+-- Base de datos: `db_quotaware `
 --
 CREATE DATABASE IF NOT EXISTS `db_sistema2` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_swedish_ci;
 USE `db_sistema2`;
@@ -102,7 +102,7 @@ CREATE TABLE `estadocotizacion` (
 INSERT INTO `estadocotizacion` (`estadoid`, `estadotipo`, `status`) VALUES
 (1, 'Aprobado', 1),
 (2, 'Rechazado', 1),
-(3, 'Realizado', 1),
+(3, 'Pendiente', 1),
 (4, 'Realizado', 1);
 
 -- --------------------------------------------------------
@@ -152,9 +152,9 @@ CREATE TABLE `pedido` (
 --
 
 INSERT INTO `pedido` (`idpedido`, `personaid`, `fecha`, `monto`, `descuento`, `nota`, `estadoid`, `idpersona`, `status`) VALUES
-(1, 11, '2021-08-03 19:47:56', '15.000', 5, 'Servicio de Hosting web', 1, 14, 1),
-(2, 12, '2021-08-04 02:23:46', '20.000', 10, 'cPanel', 2, 14, 1),
-(3, 14, '2021-08-04 12:06:18', '30.000', 20, 'Pagina responsible', 3, 14, 1);
+(1, 11, '2021-08-03 19:47:56', '15.000', 5, 'Letra grande', 1, 14, 1),
+(2, 12, '2021-08-04 02:23:46', '20.000', 10, 'Manual del sistema', 2, 14, 1),
+(3, 14, '2021-08-04 12:06:18', '30.000', 20, 'Colores corporativos', 0, 14, 1);
 
 -- --------------------------------------------------------
 
